@@ -1,0 +1,83 @@
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-with,initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="script.js"></script>
+        <title>App Choco</title>
+
+        <link rel="manifest" href="manifest.json">
+        <meta name="theme-color" content="#944d36">
+        
+    </head>
+
+    <body class="body01">
+
+        <header class="cabecalho01">
+            
+        <img class="logoheader" src="imagens/É_mais_que_chocolate__é_prazer_-removebg-preview (1).png" alt="logo">
+
+        <h1 class="titulo">Bem-vindo ao Choco!</h1>
+        </header>
+
+        <div class= "container">
+            <P id="mensagem" class="mensagemVerifique">
+            Verifique seu login!
+            </P>
+
+            <input class="input01" type="text" id="email" spaceholder="email" class="inp01">
+            <input class="input02" type="text" id="senha" spaceholder="Senha" class="inp02">
+            <button class="btn"  onclick="verificarPalavra()">Verificar</button>
+        </div>
+
+        <footer class="footer01">
+            <p>&copy; 2025 - Sobre nós! 🍫</p>
+            <div class="social-icons">
+            <a href="https://www.facebook.com/?locale=pt_BR">Facebook</a> |
+            <a href="https://www.instagram.com/">Instagram</a> |
+            <a href="https://x.com/">Twitter</a>
+            </div>
+        </footer>
+
+        <script>
+            function verificarPalavra() {
+                let palavras = [
+                    {login: "Hitalo220@gmail.com", senha: "1234" },
+                    {login: "Barbara330@gmail.com", senha: "abcd" }, 
+                    {login: "Carlos440@gmail.com", senha: "91011" }
+                ]
+        
+                let email = document.getElementById("email").value;
+                let senha = document.getElementById("senha").value;
+                let mensagem = document.getElementById("mensagem");
+                let encontrado = false;
+        
+                for (let i=0; i < palavras.length; i++){
+
+                    if (email === palavras[i].login && senha === palavras[i].senha) {
+                        encontrado = true;
+                        setTimeout(() => {
+                            mensagem.innerHTML = ("Login correto, Seja Bem-Vindo!")
+                        }, 3000);
+                        window.location.href = "segundapag.html";
+                    }
+                    
+                    
+                }
+
+                if (!encontrado) {
+                    
+                    setTimeout (() => {
+                        mensagem.innerHTML = ("Login ou senha Inválido, tente novamente.")
+                        document.getElementById("email").value = " ";
+                        document.getElementById("senha").value = " ";
+                    }, 3000);    
+                }
+
+            }
+        </script>
+
+
+    </body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-with,initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="script.js"></script>
+        <title>SegundaPágina</title>
+    </head>
+    <body class="body02">
+
+        <header class="cabecalho01">
+            
+            <img class="logoheader" src="imagens/É_mais_que_chocolate__é_prazer_-removebg-preview (1).png" alt="logo">
+
+        </header>
+
+        <h2 class="mensagemVejaChoc"> Conheça sobre os Chocolates: </h2>
+
+        <ul class="ul01">
+            <li class="li-btn" onclick="mostrarChocolates('Chocolate ao Leite')">Chocolate ao Leite</li>
+            <li class="li-btn" onclick="mostrarChocolates('Chocolate Amargo')">Chocolate Amargo</li>
+            <li class="li-btn" onclick="mostrarChocolates('Chocolate Branco')">Chocolate Branco</li>
+            <li class="li-btn" onclick="mostrarChocolates('Chocolate Ruby')">Chocolate Ruby</li>
+            <li class="li-btn" onclick="mostrarChocolates('Chocolate com Pimenta')">Chocolate com Pimenta</li>
+        </ul>
+
+        <img id="imgChocAmargo" class="imgChocAmargo" src="imagens/chocolateamargo-removebg-preview.png" alt="chocolate amargo" style="display: none;">
+        <img id="imgCHocAoLeite" class="imgCHocAoLeite" src="imagens/Tablete-Chocolate-ao-Leite-removebg-preview.png" alt="chocolate ao leite" style="display: none;">
+        <img id="imgChocBranco" class="imgChocBranco" src="imagens/png-clipart-white-chocolate-praline-bonbon-flavor-white-chocolate-removebg-preview.png" alt="chocolate branco" style="display: none;">
+        <img id="imgChocRuby" class="imgChocRuby" src="imagens/chocolate-ruby-removebg-preview.png" alt="chocolate ruby" style="display: none;">
+        <img id="imgChocPimenta" class="imgChocPimenta" src="imagens/chocolate-com-pimenta-removebg-preview.png" alt="chocolate Com Pimenta" style="display: none;">
+
+
+        <div id="descricoes" class="descricoes"></div>
+
+
+        
+        
+
+
+
+        <script>
+            async function mostrarChocolates(chocolates) {
+                
+
+                try {
+                    document.getElementById("descricoes").innerHTML = "Carregando...";
+                    await new Promise(resolve => setTimeout(resolve, 2000));
+
+                    let mensagens = {
+                        "Chocolate ao Leite": {
+                            texto: "O chocolate ao leite é um dos mais populares, conhecido pela cremosidade e sabor adocicado. Feito com cacau, leite e açúcar, equilibra intensidade e suavidade, sendo uma opção clássica e reconfortante para todos os paladares.",
+                            imagem: "imagens/Tablete-Chocolate-ao-Leite-removebg-preview.png"
+                        },
+                        "Chocolate Amargo": {
+                            texto: "Possui sabor intenso e sofisticado, com alta concentração de cacau e pouco açúcar. É ideal para quem prefere sabores fortes e ainda traz benefícios à saúde por conter antioxidantes.",
+                            imagem: "imagens/chocolateamargo-removebg-preview.png"
+                        },
+                        "Chocolate Branco": {
+                            texto: "Doce e cremoso, feito com manteiga de cacau, leite e açúcar. Tem sabor suave e amanteigado, sendo muito usado em sobremesas e apreciado por quem gosta de sabores mais leves.",
+                            imagem: "imagens/png-clipart-white-chocolate-praline-bonbon-flavor-white-chocolate-removebg-preview.png"
+                        },
+                        "Chocolate Ruby": {
+                            texto: "O chocolate ruby é considerado o “quarto tipo de chocolate”, lançado oficialmente em 2017. Ele é feito a partir de grãos de cacau ruby, que possuem naturalmente uma coloração rosada. Seu grande diferencial está no sabor: tem um gosto mais frutado, levemente ácido e doce ao mesmo tempo, lembrando frutas vermelhas, sem a adição de corantes ou aromatizantes artificiais. Além disso, sua cor rosa vibrante e sabor único fazem dele uma opção muito usada em confeitaria e sobremesas gourmet.",
+                            imagem: "imagens/chocolate-ruby-removebg-preview.png"
+                        },
+                        "Chocolate com Pimenta" : {
+                            texto: "O chocolate com pimenta é uma combinação que une a doçura e a cremosidade do chocolate ao toque picante da pimenta. Essa mistura cria uma experiência sensorial diferente: primeiro vem o sabor adocicado e suave do chocolate, seguido pela leve ardência da pimenta, que realça o paladar e torna o doce mais intenso. É uma opção apreciada por quem gosta de contrastes e de sabores marcantes, ao mesmo tempo exóticos e sofisticados.",
+                            imagem: "imagens/chocolate-com-pimenta-removebg-preview.png"
+                        }
+                    };
+
+                    document.getElementById("descricoes").innerHTML = mensagens[chocolates];
+
+                    let escolhido = mensagens[chocolates];
+
+                    if (escolhido) {
+                        descricoes.innerHTML = `
+                            <p>${escolhido.texto}</p>
+                            <img src="${escolhido.imagem}" alt="${chocolates}" width="250" style="margin-top:10px; border-radius:8px;">
+                        `;
+                    } else {
+                        descricoes.innerHTML = "Esse tipo de chocolate não está disponível.";
+                    }
+
+            
+                } catch (erro) {
+                    document.getElementById("descricoes").innerHTML = "Erro" + erro.message;
+
+                } 
+
+            }
+        </script>
+
+
+
+
+
+
+
+
+
+
+    </body>
+
+    <footer class="footer01">
+        <p>2025 - Sobre nós! 🍫</p>
+        <div class="social-icons">
+        <a href="https://www.facebook.com/?locale=pt_BR">Facebook</a> |
+        <a href="https://www.instagram.com/">Instagram</a> |
+        <a href="https://x.com/">Twitter</a>
+    </footer>
+</html>

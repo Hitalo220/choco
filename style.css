@@ -1,0 +1,239 @@
+
+.cabecalho01 {
+    background-color:#944d36;
+    text-align: center;
+    background-repeat: no-repeat;
+    height: 120px;
+}
+
+.logoheader {
+    display: block;
+    margin: 0 auto;
+    width: 130px;
+    height: 130px;
+}
+
+
+.body01 {
+    background-image: url(imagens/ChatGPT\ Image\ 28\ de\ ago.\ de\ 2025\,\ 20_25_25.png);
+    background-color: rgb(244, 244, 202);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100%;
+}
+
+.body02 {
+    background-image: url(imagens/ChatGPT\ Image\ 28\ de\ ago.\ de\ 2025\,\ 20_25_25.png);
+    background-color: rgb(244, 244, 202);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100%;
+}
+
+.insta {
+    background-color: #d14679; /* Green */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 20px;
+    border-radius: 4px;
+    width: 100px;
+}
+
+#descricoes {
+    display: flex;
+    flex-direction: column; /* texto acima da imagem */
+    align-items: center;    /* centraliza horizontalmente */
+    justify-content: center; 
+    max-width: 600px;       /* largura máxima para não esticar demais */
+    margin: 20px auto;      /* centraliza na página */
+    padding: 15px;
+    background-color:#944d36; /* leve tom creme de fundo */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* sombra suave */
+    text-align: center;
+    font-family: "Arial", sans-serif;
+    line-height: 1.5;
+}
+
+#descricoes img {
+    margin-top: 15px;
+    max-width: 100%;   /* evita que a imagem ultrapasse o container */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* sombra leve na imagem */
+}
+
+
+.ul01 {
+    display: flex;
+    flex-wrap: wrap; /* permite quebrar em múltiplas linhas em telas pequenas */
+    justify-content: center;
+    padding: 15px;
+    list-style: none;
+    gap: 20px; /* espaçamento entre os botões */
+    padding-bottom: 120px;
+}
+
+.li-btn {
+    background-color: #944d36; /* marrom */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.li-btn:hover {
+    background-color: #7b3e2b; /* tom mais escuro ao passar o mouse */
+    transform: scale(1.05);
+}
+
+/* Tornando os botões mais largos em telas pequenas */
+@media (max-width: 600px) {
+    .li-btn {
+        width: 80%; /* ocupa boa parte da tela */
+        padding: 12px 0;
+    }
+
+    .ul01 {
+        padding: 15px;
+        gap: 15px;
+    }
+}
+
+.container {
+    background-color: #944d36;
+    display: block;
+    justify-content: center;
+    margin:0 auto;
+    width: 300px;
+    height: 300px;
+    position: center;
+    margin-top: 100px;
+    margin-bottom: 110px;
+    border-radius: 10px;
+}
+
+.container-btn {
+    background-color: #944d36;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.mensagemVerifique {
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.mensagemVejaChoc {
+    background-color: #944d36; /* marrom */
+    color: white;
+    text-align: center;
+    display: flex;             /* mantém flexível para centralizar */
+    flex-direction: column;    /* texto e imagem empilhados verticalmente */
+    align-items: center;       /* centraliza conteúdo horizontalmente */
+    justify-content: center;
+    margin: 50px auto 15px auto; /* topo maior, centraliza horizontalmente */
+    padding: 20px;             /* adiciona espaçamento interno */
+    border-radius: 10px;
+    max-width: 90%;            /* evita que ultrapasse a tela */
+    box-sizing: border-box;
+}    
+
+.msgDsc {
+    color: white;
+    font-size: large;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+
+.input01 {
+    width: 200px;
+    padding: 10px;
+    margin: 10px auto;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.input02 {
+    width: 200px;
+    padding: 10px;
+    margin: 10px auto;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+
+.btn {
+    background-color: #ac7e6f; /* Green */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 20px auto;
+    cursor: pointer;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color:  #bc9183;
+}
+
+.footer01 {
+    background-color:#944d36; 
+    color: #F5E6DA; 
+    text-align: center;
+    padding: 20px 10px;
+    font-family: "Arial", sans-serif;
+    font-size: 14px;
+}
+
+.footer01 a {
+    color: #F5E6DA;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer01 a:hover {
+    color: #FFD9B3; 
+}
+
+.footer01 .social-icons {
+    margin-top: 10px;
+}
+
+.footer01 .social-icons a {
+    display: inline-block;
+    margin: 0 5px;
+    font-size: 18px;
+}
